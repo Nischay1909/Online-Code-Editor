@@ -1,20 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Code Editor</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="editor-container">
-        <textarea id="html-code" placeholder="Write HTML code here..."></textarea>
-        <textarea id="css-code" placeholder="Write CSS code here..."></textarea>
-        <textarea id="js-code" placeholder="Write JavaScript code here..."></textarea>
-    </div>
-    <button onclick="runCode()">Run Code</button>
-    <iframe id="output"></iframe>
+  <header>
+    <h1>NISCHAY SHUKLA</h1>
+    <h4 class="hire-me">College Student</h4>
+    <p id="welcome-msg"></p>
+  </header>
 
-    <script src="script.js"></script>
+  <nav>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact-me">Contact Me</a></li>
+      <li><a href="#admin-login" onclick="showadminlogin()">Admin Login</a></li>
+    </ul>
+  </nav>
+
+  <button id="switch-theme">Toggle Theme</button>
+
+  <main>
+    <section class="section-style" id="experience">
+      <h2 class="first">Experience</h2>
+      <div>
+        <h3>Intern - Learning Zone</h3>
+        <p>Working on Projects</p>
+      </div>
+      <div>
+        <h3>Intern - Amazon</h3>
+        <p>Working on System Design</p>
+      </div>
+    </section>
+
+    <section class="section-style" id="education">
+      <h2>Education</h2>
+      <div>
+        <h3>Schooling - Adarsh Vidya Mandir Unnao</h3>
+        <p>2022</p>
+      </div>
+      <div>
+        <h3>B.Tech - Institute of Engineering and Technology Lucknow</h3>
+        <p>2027</p>
+      </div>
+    </section>
+
+    <section class="section-style" id="hobbies">
+      <h2>Hobbies</h2>
+      <h3>Travelling</h3>
+      <h3>Playing Golf</h3>
+    </section>
+
+    <section class="section-style" id="contact-me">
+      <h2 class="first">Contact Me</h2>
+      <form>
+        <div>
+          <label>Name:</label>
+          <input type="text" placeholder="Enter name" id="name">
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type="text" placeholder="Enter mail" id="mail">
+        </div>
+        <div>
+          <label>Message:</label>
+          <textarea placeholder="Enter your message" id="msg"></textarea>
+        </div>
+        <button type="submit">Send</button>
+        <p id="form-msg"></p>
+      </form>
+    </section>
+
+    <section class="section-style" id="admin-login">
+      <h2 class="first">Admin Login</h2>
+      <form id="admin-form">
+        <div>
+          <label>Username:</label>
+          <input type="text" placeholder="Enter username" id="usrnme">
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" placeholder="Enter password" id="pwd">
+        </div>
+        <button type="submit">Submit</button>
+        <p id="login-msg"></p>
+      </form>
+    </section>
+
+    <section class="section-style" id="user-responses">
+      <h2>User Responses</h2>
+      <div id="responses"></div>
+    </section>
+  </main>
 </body>
 </html>
